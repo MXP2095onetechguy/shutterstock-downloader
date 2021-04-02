@@ -14,9 +14,9 @@ currently being supported with security updates.
 
 
 For greasyfork:
-Use the issue and use the tag bug to report vinerability and bugs on github.
+Use the issue and use the tag bug to report vunerability and bugs on github.
 
 For github:
-Use the issue and use the tag bug to report vinerability and bugs.
+Use the issue and use the tag bug to report vunerability and bugs.
 
 *when i say tag, i mean labels
