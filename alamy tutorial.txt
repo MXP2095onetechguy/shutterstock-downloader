@@ -1,0 +1,5 @@
+Go to Alamy.com
+Search for an image and copy its link.
+Paste the url in input box above and click on download.
+Our system will generate a download link.
+Done.
