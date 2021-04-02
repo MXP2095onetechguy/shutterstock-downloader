@@ -2,8 +2,7 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+UserScript version family support
 
 | Version | Supported          |
 | ------- | ------------------ |
@@ -19,4 +18,4 @@ Use the issue and use the tag bug to report vunerability and bugs on github.
 For github:
 Use the issue and use the tag bug to report vunerability and bugs.
 
-*when i say tag, i mean labels
+*when I say tag, I mean labels
