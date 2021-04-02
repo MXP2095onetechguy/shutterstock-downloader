@@ -18,3 +18,5 @@ Use the issue and use the tag bug to report vinerability and bugs on github.
 
 For github:
 Use the issue and use the tag bug to report vinerability and bugs.
+
+*when i say tag, i mean labels
