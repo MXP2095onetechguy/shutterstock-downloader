@@ -1,6 +1,6 @@
 # Shutterstock downloader
 
-This is a userscript that allows downloading of shutterstock images(alamy doesn't work, i have tested it)
+This is a userscript that allows downloading of shutterstock images(alamy does work partially,{problem that the button is not appearing}
 
 current version: 2.9
 
