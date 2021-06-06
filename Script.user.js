@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         Shutterstock Downloader for tampermonke(or tapLmonke)
 // @namespace    MXPServer 20953 Onetechguy
-// @version      2.10
+// @version      3.0
 // @description  Shutterstock downloader script
 // @author       MXPServer 20953 Onetechguy
 // @include      https://www.shutterstock.com/image-photo/*
 // @include      https://www.shutterstock.com/image-vector/*
+// @include      https://alamy.com
 // @require      https://code.jquery.com/jquery-3.6.0.js
 // @grant        none
 // ==/UserScript==
@@ -37,6 +38,8 @@ function addJQuery(callback) {
     hehe.href = "https://downloader.la/Ext.php?url=" + window.location.href;
     div.appendChild(hehe);*/
     var finalLink = "https://downloader.la/Ch.php?url=" + window.location.href;
+    var alamyfinalLink = "https://www.toolxox.com/dl/ay/get.php?get_url=";
+    var AMIAlamyatDownloadPage = !!document.getElementById("i0_Image");
     /* ---------------- Style  --------------- */
     var style = document.createElement('style');
     style.type = 'text/css';
@@ -57,8 +60,20 @@ function addJQuery(callback) {
     gt_btn.innerHTML='<a target="_blank" href=' + finalLink + '> Download Image <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></a><!--<button class="btn-primary" onclick="$( "#LinkHAHAisCreatortheMXPServer20953Onetechguy" ).remove()">remove</button>-->';
     more_btn.innerHTML='<a target="_blank" href='+ 'https://downloader.la'+'> More Utils at Downloader.la </a><!--<button class="btn-primary" onclick="$( "#LinkUTILSisCreatortheMXPServer20953Onetechguy" ).remove()">remove</button>-->';
     exp_btn.innerHTML = '<a target="_blank" href="https://downloader.la/Ch.php?url=https://www.shutterstock.com/image-vector/business-woman-slipping-falling-banana-peel-308325830">Example<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></a>';
-    document.querySelector('body').appendChild(gt_btn);
-    document.querySelector('body').appendChild(more_btn);
+    if(window.location.hostname == "www.shutterstock.com"){
+        document.querySelector('body').appendChild(gt_btn);
+        document.querySelector('body').appendChild(more_btn);
+    }
+    else if(window.location.hostname == "www.alamy.com"){
+        if(AMIAlamyatDownloadPage == true){
+            var imgdoc = document.getElementById("i0_Image");
+            alamyfinalLink = alamyfinalLink + imgdoc.src;
+            gt_btn.innerHTML='<a target"_blank" href=' + alamyfinalLink + '> Download Image <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></a>';
+            more_btn.innerHTML='<a target="_blank" href='+ 'https://alamy-downloader.beatsnoop.com/'+'> More Utils at beatsnoop downloader </a><!--<button class="btn-primary" onclick="$( "#LinkUTILSisCreatortheMXPServer20953Onetechguy" ).remove()">remove</button>-->';
+            document.querySelector('body').appendChild(gt_btn);
+            document.querySelector('body').appendChild(more_btn);
+        }
+    }
 
 
 
